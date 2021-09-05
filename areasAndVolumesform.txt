@@ -1,0 +1,7 @@
+area of circle = pi * r*r;
+area of triangle= 1/2*b*h;
+area of rectangle=l*b
+area of isosceles triangle=1/2*b*h;
+area of parallelogram=b*h;
+area of rhombus=1/2 pq;
+area of equilateral triangle=root(3)/4*a*a;
