@@ -1,0 +1,58 @@
+import java.io.*;
+import java.util.*;
+import java.util.regex.*;
+class MyRegex{
+        public boolean find(String reg){
+            boolean check=Pattern.matches("(([.0-9]+)([^a-zA-Z]))",reg);
+            // System.out.println(check);
+            boolean result=true;
+            if(check){
+                String[] temp=reg.split("\\.");
+                // System.out.println(temp.length);
+                if(temp.length!=4){
+                    
+                    result=false;
+                }
+                else{
+                    for(String s:temp){
+                        // System.out.println(s);
+                        boolean b=Pattern.matches("(([0-9])([^a-zA-Z]){1,2})", reg);
+                        result=true;
+                    }
+                }
+            }
+            else{
+               result=false;
+            }
+           return result;
+            
+        }
+        
+    }
+public class Solution {
+     
+
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+        MyRegex obj=new MyRegex();
+        
+        int n=6;
+        while(n>0){
+            String ip=inp.nextLine();
+            System.out.println(obj.find(ip));
+            n--;
+            
+            
+        }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+    }
+}
